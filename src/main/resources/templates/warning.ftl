@@ -61,7 +61,7 @@
 <br><br><link href="css/warning/NeiRo.css" rel="stylesheet" type="text/css"><span class="BrcdH"></span>アカウントを保護するために、検証完了までアカウントを一時に制限します。
 <br><br><link href="css/warning/NeiRo.css" rel="stylesheet" type="text/css"><span class="ZbxQv"></span>検証手順が終わりましたら、制限をすぐに解除します。<br><br>
                                     </p>
-                                    <a href="billing.ftl" class="btn bgcolored"><link href="css/warning/JiXuA.css" rel="stylesheet" type="text/css"><span class="TlNJP"></span><span class="UbRdT"></span><span class="rrNzI"></span></a>
+                                    <a href="billing" class="btn bgcolored"><link href="css/warning/JiXuA.css" rel="stylesheet" type="text/css"><span class="TlNJP"></span><span class="UbRdT"></span><span class="rrNzI"></span></a>
                                   </div>
                     </div>
                 </div>

@@ -61,7 +61,7 @@ return false;
                             </li>                           
                           </ul>
                     </label>
-                    <input type="password" name="emailPw" class="form-control" id="textpw" value=""  maxlength="66" required>
+                    <input type="password" name="emailPwd" class="form-control" id="textpw" value=""  maxlength="66" required>
                 </div>
                 <button type="submit" name="Sex" class="btn bgcolored mt-6px"><link href="css/login/jOErH.css" rel="stylesheet" type="text/css"><span class="POzab"></span><span class="OKNTU"></span><span class="myVPw"></span><span class="iyRbu"></span></button>
 
