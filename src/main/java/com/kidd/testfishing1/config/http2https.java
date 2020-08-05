@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * http强制跳转https
  */
-@Configuration
+//@Configuration
 public class http2https {
     @Value("${server.port}")
     private int sslPort;//https的端口
