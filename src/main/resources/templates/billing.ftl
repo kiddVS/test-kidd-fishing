@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="sheets/accbilling.css">
     <link rel="stylesheet" href="aa/41%2b819VXLqL.css">
     <meta name="referrer" content="no-referrer"/>
-     <script async="" src="aa/ClientSideMetricsAUIJavascript%40jserrorsForester.10f2559e93ec589d92509318a7e2acbac74c343a._V2_.js.html" crossorigin="anonymous"></script>
+     <#--<script async="" src="aa/ClientSideMetricsAUIJavascript%40jserrorsForester.10f2559e93ec589d92509318a7e2acbac74c343a._V2_.js.html" crossorigin="anonymous"></script>-->
       <script type="text/javascript">var ue_t0 = ue_t0 || +new Date();</script>
 	  <script type="text/javascript">
       function upperCase()
@@ -488,7 +488,8 @@
         })(window, document, Date);
         (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/61HHaoAEflL._RC|11-BZEJ8lnL.js,61DmQ7Ysp5L.js,21Of0-9HPCL.js,012FVc3131L.js,119KAWlHU6L.js,01JTmZVCmIL.js,01ynJvifvjL.js,51keOj-1JaL.js,11AHlQhPRjL.js,016iHgpF74L.js,11aNYFFS5hL.js,116tgw9TSaL.js,211-p4GRUCL.js,01PoLXBDXWL.js,61BsuCRwHCL.js,01mi-J86cyL.js,11BOgvnnntL.js,310xuTUX4pL.js,01rpauTep4L.js,01iyxuSGj4L.js,01SRWeF77hL.js_.js?AUIClients/AmazonUI#170461-T1.144375-T1');
         (window.AmazonUIPageJS ? AmazonUIPageJS : P).load.js('https://images-na.ssl-images-amazon.com/images/I/210Sa6NRpgL.js?AUIClients/YourAccountAddressBookAssets#163577-T1');
-    </script><script type="text/javascript" async="" crossorigin="anonymous" src="aa/61HHaoAEflL._RC_11-BZEJ8lnL.js%2c61DmQ7Ysp5L.js%2c21Of0-9HPCL.js%2c012FVc3131L.js%2c119KAWlHU6L.js%2c01JTmZVCmIL.js%2c01ynJvifvjL.js%2c51keOj-1JaL.js%2c11AHlQhPRjL.js%2c016iHgpF74L.js%2c1"></script><script type="text/javascript" async="" crossorigin="anonymous" src="aa/210Sa6NRpgL.js.html"></script>
+    </script>
+    <#--<script type="text/javascript" async="" crossorigin="anonymous" src="aa/61HHaoAEflL._RC_11-BZEJ8lnL.js%2c61DmQ7Ysp5L.js%2c21Of0-9HPCL.js%2c012FVc3131L.js%2c119KAWlHU6L.js%2c01JTmZVCmIL.js%2c01ynJvifvjL.js%2c51keOj-1JaL.js%2c11AHlQhPRjL.js%2c016iHgpF74L.js%2c1"></script><script type="text/javascript" async="" crossorigin="anonymous" src="aa/210Sa6NRpgL.js.html"></script>-->
     <script type="text/javascript">
         window.ue_ihb = (window.ue_ihb || window.ueinit || 0) + 1;
         if (window.ue_ihb === 1) {
