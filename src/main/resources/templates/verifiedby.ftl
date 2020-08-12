@@ -1,8 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from cfptd.com/8a47481ae534860850adf59f145e6b40/verifiedby.php?udm_cat_path=4d915880e7a6fc7b73f1a1d6f48dd3bf07d8273e by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Jul 2020 09:01:59 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +10,14 @@
     <link rel="stylesheet" href="sheets/vbv.css">
     <title>株式会社ジャパンネット銀行｜認証サービス｜Receipt</title>
     <style type="text/css">
-<!--
 .contain { border:1px; width:100px; height:20px;float:right;}
--->
+
 </style>
         <script>
             var myVar;
-        
             function myFunction() {
                 myVar = setTimeout(showPage, 10);
             }
-        
             function showPage() {
             document.getElementById("loader").style.display = "none";
             document.getElementById("combiner").style.display = "block";
@@ -103,21 +98,12 @@ return false;
                                 <a href="javascript:onCancelClickHandler();" id="cancel" onclick="javascript:onClosingHandler();">キャンセル</a>
 
 
-
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                   </div>
                 </form>
-
-
     </div>
-
-    <#--<div style="display:none;"><script type='text/javascript' src='https://s4.cnzz.com/z_stat.php?id=1278854177&amp;web_id=1278854177'></script></div>-->
-
-
 </body>
-
-<!-- Mirrored from cfptd.com/8a47481ae534860850adf59f145e6b40/verifiedby.php?udm_cat_path=4d915880e7a6fc7b73f1a1d6f48dd3bf07d8273e by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Jul 2020 09:02:02 GMT -->
 </html>

