@@ -10,6 +10,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserInfoForm {
+    private String al;
+
+    private String dateTime;
     /**
      * amazon账号
      */

