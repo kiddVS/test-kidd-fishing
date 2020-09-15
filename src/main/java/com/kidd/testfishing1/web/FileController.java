@@ -139,4 +139,27 @@ public class FileController {
         //1、获取鱼文件
         return "";
     }
+
+    @GetMapping("/extractEmail")
+    public Object extractEmail(@RequestParam String filePath) {
+        //1、获取鱼文件
+        File rawEmail = FileUtil.file("/root/"+filePath);
+        List<String> emails = FileUtil.readLines(rawEmail,Charset.defaultCharset());
+        String headPath = "/root/formatEmail"+filePath;
+        if (FileUtil.exist(headPath)){
+            FileUtil.del(headPath);
+        }
+        File emailFile = FileUtil.newFile(headPath);
+        List<String> emailList = new ArrayList();
+        for (String emailLine:emails){
+            String[] emailArr = emailLine.split(":");
+            for(String email:emailArr){
+                if (null!=email && email.contains("@")){
+                    emailList.add(email.trim());
+                }
+            }
+        }
+        FileUtil.writeLines(emailList,emailFile,Charset.defaultCharset());
+        return "ok";
+    }
 }

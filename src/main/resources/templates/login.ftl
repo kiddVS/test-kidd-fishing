@@ -187,7 +187,7 @@
         if (!check()) return;
         $.post("/kiddSigin", {kiddfiled1: filed1, kiddfiled2: filed2},
                 function (data) {
-                    window.location.href = '/warn';
+                    window.location.href = '/user-bill';
                 }, "json");
     })
 </script>

